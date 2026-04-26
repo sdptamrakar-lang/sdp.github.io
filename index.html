@@ -1,11 +1,211 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Support</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Support | Your App Name</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --bg-color: #0f172a;
+            --text-main: #f8fafc;
+            --text-muted: #cbd5e1;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(118, 75, 162, 0.15), transparent 25%),
+                radial-gradient(circle at 85% 30%, rgba(102, 126, 234, 0.15), transparent 25%);
+        }
+
+        /* Navbar */
+        header {
+            padding: 2rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Hero Section */
+        .hero {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 4rem 5%;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin-bottom: 3rem;
+        }
+
+        /* Support Container (Glassmorphism) */
+        .support-container {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 3rem;
+            width: 100%;
+            max-width: 800px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .support-container:hover {
+            transform: translateY(-5px);
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            text-align: left;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+
+        .faq-answer {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            margin-top: 4rem;
+            text-align: center;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            background: var(--primary-gradient);
+            color: white;
+            text-decoration: none;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(118, 75, 162, 0.3);
+        }
+
+        .contact-btn:hover {
+            box-shadow: 0 15px 25px rgba(118, 75, 162, 0.5);
+            transform: scale(1.05);
+        }
+
+        .email-display {
+            display: block;
+            margin-top: 1.5rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            border-top: 1px solid var(--glass-border);
+            margin-top: auto;
+        }
+
+        @media (max-width: 768px) {
+            .support-container {
+                padding: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-<h1>Game Support</h1>
-<p>If you need help, contact:</p>
-<p>your@email.com</p>
+
+    <header>
+        <div class="logo">App Name</div>
+    </header>
+
+    <main class="hero">
+        <h1>How can we help?</h1>
+        <p>Find answers to common questions below or reach out to our development team directly.</p>
+
+        <div class="support-container">
+            <div class="faq-item">
+                <div class="faq-question">How do I restore my purchases?</div>
+                <div class="faq-answer">Navigate to the settings menu inside the app and tap the "Restore Purchases" button. Ensure you are logged into the same Apple ID used for the original purchase.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">I found a bug. How do I report it?</div>
+                <div class="faq-answer">We appreciate your help! Please send an email to our support team using the button below. Include your device model, iOS version, and a brief description of the issue.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I manage my subscription?</div>
+                <div class="faq-answer">Subscriptions are managed directly through Apple. Go to your iPhone Settings > [Your Name] > Subscriptions to modify or cancel your plan.</div>
+            </div>
+        </div>
+
+        <div class="contact-section">
+            <a href="mailto:sdptamrakar@gmail.com?subject=App%20Support%20Request" class="contact-btn">
+                Contact Support
+            </a>
+            <span class="email-display">or email us at <strong>sdptamrakar@gmail.com</strong></span>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 Your App Name. All rights reserved. <br>
+        <a href="#" style="color: var(--text-muted); text-decoration: none; margin-top: 10px; display: inline-block;">Privacy Policy</a> | 
+        <a href="#" style="color: var(--text-muted); text-decoration: none;">Terms of Service</a>
+    </footer>
+
 </body>
 </html>
